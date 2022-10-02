@@ -1,0 +1,105 @@
+.product-summary{
+    margin-top: 70px;
+    padding: 50px;
+    line-height: 35px;
+}
+.prd-sum-title{
+    color: hsl(26, 100%, 55%);
+    font-size: 10px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+.product-summary h3{
+    font-size: 2.5rem;
+    width: 10em;
+    margin: 10px;
+    line-height: 45px;
+}
+
+.prd-sum-par{
+    color: grey;
+    font-size: 13px;
+    font-weight: 400;
+    width: 350px;
+    margin: 10px;
+    line-height: 22px;
+}
+
+.price-discount{
+    display: flex;
+    gap: 10px;
+}
+
+.price-discount h5{
+    font-size: 0.8rem;
+    background-color: hsl(25, 100%, 94%);
+    color: orange;
+    /* height: 18px; */
+    padding: 0 4px 0 4px   ;
+    margin-top: 10px;
+    height: 32px; 
+    border-radius: 5px;
+}
+
+.price-discount p{
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.product-summary h4{
+    color: rgb(184, 180, 180);
+    font-size: .9rem;
+    text-decoration: line-through 1.3px;
+    font-weight: 550;
+    margin: 10px;
+    line-height: .1px;
+}
+
+.numbers-submit{
+    display: flex;
+    gap: 20px;
+}
+
+.plus-minus{
+    background-color: hsl(223, 64%, 98%);
+    width: 37%;
+    text-align: center;
+    padding: .4rem;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.plus{
+    cursor: pointer;
+}
+
+.minus{
+    cursor: pointer;
+}
+
+.AddCart{
+    cursor: pointer;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    width: 45%;
+    text-align: center;
+    padding: .4rem;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.AddCart img{
+    filter: brightness(100);
+    margin-right: -55px;
+}
