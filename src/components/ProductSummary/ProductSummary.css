@@ -6,7 +6,7 @@
 .prd-sum-title{
     color: hsl(26, 100%, 55%);
     font-size: 10px;
-    font-weight: bolder;
+    font-weight:900;
     letter-spacing: 2px;
     margin: 10px;
 }
@@ -38,14 +38,14 @@
     color: orange;
     /* height: 18px; */
     padding: 0 4px 0 4px   ;
-    margin-top: 10px;
-    height: 32px; 
+    margin-top: 14px;
+    height: 30px; 
     border-radius: 5px;
 }
 
 .price-discount p{
     font-size: 1.7rem;
-    font-weight: 800;
+    font-weight: 700;
     margin: 10px;
 }
 
@@ -102,4 +102,65 @@
 .AddCart img{
     filter: brightness(100);
     margin-right: -55px;
+}
+
+
+@media(max-width: 415px){
+    .product-summary{
+        display: flex;
+        flex-direction: column;
+        margin-top: 70%;
+        width: 100%;
+        padding: 5px;
+        line-height: 35px;
+    }
+    .plus-minus{
+        background-color: hsl(223, 64%, 98%);
+        width: 80%;
+        text-align: center;
+        padding: .4rem;
+        border-radius: 10px;
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: -20px;
+    }
+    
+    .plus{
+        cursor: pointer;
+    }
+    
+    .minus{
+        cursor: pointer;
+    }
+    .numbers-submit{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        gap: 10px;
+    }
+    
+    .AddCart{
+        cursor: pointer;
+        background-color: hsl(26, 100%, 55%);
+        color: white;
+        width: 80%;
+        text-align: center;
+        padding: .4rem;
+        border-radius: 10px;
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: space-around;
+        
+        font-size: 13px;
+        font-weight: 700;
+        margin-left: -20px;
+    }
+
+    .AddCart p{
+        margin-left: -40px;
+    }
 }

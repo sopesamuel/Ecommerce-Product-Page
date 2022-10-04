@@ -1,16 +1,36 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './ProductSummary.css'
 import plus from '../../assets/images/icon-plus.svg'
 import minus from '../../assets/images/icon-minus.svg'
 import cartIcon from '../../assets/images/icon-cart.svg'
+import { UserContext } from '../Contexts/ButtonContext'
+
+
+
 
 export default function ProductSummary() {
-
+  const {cartNumber, setCartNumber} = useContext(UserContext);
   const [number, setNumber] = useState(0)
 
-  const AddCart = () =>{
-    
+  const resetNumber = () =>{
+   setNumber(0)
   }
+
+  const minusNum = () =>{
+    if(number >= 1){
+      setNumber(number - 1)
+    } 
+  }
+  
+  const Addplus = () =>{
+  setNumber(number + 1)
+  }
+
+  const AddCart = () =>{
+    setCartNumber(cartNumber + number);
+    resetNumber()
+  }
+ 
   return (
     <div className='product-summary'>
     <p className='prd-sum-title'>SNEAKER COMPANY</p>
@@ -22,14 +42,16 @@ export default function ProductSummary() {
     <h4>$250.00</h4>
     <div className='numbers-submit'>
       <div className='plus-minus'>
-      <img src={minus} className='minus'/>
+      <img src={minus} onClick={minusNum} className='minus'/>
       {number}
-      <img src={plus} className='plus'/>
-      </div>
-      <div className='AddCart' onClick={AddCart()}>
+      <img src={plus} onClick={Addplus} className='plus'/>
+      </div> 
+      <div className='AddCart' onClick={() => AddCart()}>
      <img src={cartIcon} />
      <p>Add to Cart</p>
       </div>
+      
+   
     </div>
     </div>
   )
