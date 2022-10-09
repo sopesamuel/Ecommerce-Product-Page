@@ -53,7 +53,7 @@ const nextButton = () =>{
     alt='' 
     key={index} 
     className='images-thumbnail' 
-    onClick={() => setSelected(img)}
+    onClick={() => setSelected(selected(setCurrentIndex(index)))}
     />
      ))}
     </div>

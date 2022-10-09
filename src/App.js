@@ -1,5 +1,4 @@
 import { useContext, useState } from 'react';
-import './App.css';
 import Cart from './components/Cart/Cart';
 import ButtonContext from './components/Contexts/ButtonContext';
 import Navbar from './components/navbar/Navbar';
@@ -14,14 +13,13 @@ function App() {
   const {showLightbox, setShowLightbox} = useContext(lightContext)
 
   return (
-
     <div className="App">
     <ButtonContext>
     <Navbar />
     {showCart && <Cart /> }
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex',  justifyContent: 'center', gap: '5px'}}>
         <ProductPage/> 
-        {showLightbox && <Lightbox />}
+        {showLightbox && <Lightbox style={{height: '100%'}}/>}
         <ProductSummary/>
         </div>
     </ButtonContext>

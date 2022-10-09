@@ -36,7 +36,6 @@
     font-size: 0.8rem;
     background-color: hsl(25, 100%, 94%);
     color: orange;
-    /* height: 18px; */
     padding: 0 4px 0 4px   ;
     margin-top: 14px;
     height: 30px; 
@@ -105,7 +104,7 @@
 }
 
 
-@media(max-width: 415px){
+@media(max-width: 600px){
     .product-summary{
         display: flex;
         flex-direction: column;
@@ -114,6 +113,25 @@
         padding: 5px;
         line-height: 35px;
     }
+    .prd-sum-title{
+        width: 80%;
+    }
+    .product-summary h3{
+        font-size: 1.8rem;
+        width: 10em;
+        margin: 10px;
+        line-height: 45px;
+    }
+
+    .prd-sum-par{
+        color: grey;
+        font-size: 15px;
+        font-weight: 400;
+        width: 320px;
+        margin: 10px;
+        line-height: 22px;
+    }
+
     .plus-minus{
         background-color: hsl(223, 64%, 98%);
         width: 80%;

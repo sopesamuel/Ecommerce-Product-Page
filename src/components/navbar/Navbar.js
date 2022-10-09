@@ -6,19 +6,21 @@ import menuBars from "../../assets/images/icon-menu.svg"
 import logo from '../../assets/images/logo.svg'
 import { UserContext } from '../Contexts/ButtonContext'
 import { showContext } from '../Contexts/ShowCartContext'
+import LightboxMobile from '../LightboxMobile.js/LightboxMobile'
+import LitMobile, { lightMobile } from '../Contexts/LitMobile'
 
 export default function Navbar() {
 
   const {cartNumber, setCartNumber} = useContext(UserContext)
   const {showCart, setShowCart} = useContext(showContext);
-
+  const {litMobile, setLitMobile} = useContext(lightMobile)
   return (
 
   <div className='navbar'>
   <button>
-    <img src={menuBars} alt=''/>
+    <img src={menuBars} alt='' onClick={()=>{setLitMobile(!litMobile)}}/>
   </button>
-
+   {litMobile && <LightboxMobile/>}
     <div className="img-text">
         <img src={logo} className="navbar-img" alt=''/>
             <div className="navbar-text">
